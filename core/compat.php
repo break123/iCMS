@@ -174,34 +174,37 @@ function iCMS_error_handler($errno, $errstr, $errfile, $errline){
     if($errno == 0) return;
     if(!defined('E_STRICT'))            define('E_STRICT', 2048);
     if(!defined('E_RECOVERABLE_ERROR')) define('E_RECOVERABLE_ERROR', 4096);
-    print "<pre>\n<b>";
+    $html="<pre>\n<b>";
     switch($errno){
-        case E_ERROR:               print "Error";                  break;
-        case E_WARNING:             print "Warning";                break;
-        case E_PARSE:               print "Parse Error";            break;
-        case E_NOTICE:              print "Notice";                 break;
-        case E_CORE_ERROR:          print "Core Error";             break;
-        case E_CORE_WARNING:        print "Core Warning";           break;
-        case E_COMPILE_ERROR:       print "Compile Error";          break;
-        case E_COMPILE_WARNING:     print "Compile Warning";        break;
-        case E_USER_ERROR:          print "User Error";             break;
-        case E_USER_WARNING:        print "User Warning";           break;
-        case E_USER_NOTICE:         print "User Notice";            break;
-        case E_STRICT:              print "Strict Notice";          break;
-        case E_RECOVERABLE_ERROR:   print "Recoverable Error";      break;
-        default:                    print "Unknown error ($errno)"; break;
+        case E_ERROR:              $html.="Error";                  break;
+        case E_WARNING:            $html.="Warning";                break;
+        case E_PARSE:              $html.="Parse Error";            break;
+        case E_NOTICE:             $html.="Notice";                 break;
+        case E_CORE_ERROR:         $html.="Core Error";             break;
+        case E_CORE_WARNING:       $html.="Core Warning";           break;
+        case E_COMPILE_ERROR:      $html.="Compile Error";          break;
+        case E_COMPILE_WARNING:    $html.="Compile Warning";        break;
+        case E_USER_ERROR:         $html.="User Error";             break;
+        case E_USER_WARNING:       $html.="User Warning";           break;
+        case E_USER_NOTICE:        $html.="User Notice";            break;
+        case E_STRICT:             $html.="Strict Notice";          break;
+        case E_RECOVERABLE_ERROR:  $html.="Recoverable Error";      break;
+        default:                   $html.="Unknown error ($errno)"; break;
     }
-    print ":</b> <i>$errstr</i> in <b>$errfile</b> on line <b>$errline</b>\n";
+    $html.=":</b> $errstr in <b>$errfile</b> on line <b>$errline</b>\n";
     if(function_exists('debug_backtrace')){
         //print "backtrace:\n";
         $backtrace = debug_backtrace();
         array_shift($backtrace);
         foreach($backtrace as $i=>$l){
-            print "[$i] in function <b>{$l['class']}{$l['type']}{$l['function']}</b>";
-            if($l['file']) print " in <b>{$l['file']}</b>";
-            if($l['line']) print " on line <b>{$l['line']}</b>";
-            print "\n";
+            $html.="[$i] in function <b>{$l['class']}{$l['type']}{$l['function']}</b>";
+            $l['file']&&	$html.=" in <b>{$l['file']}</b>";
+            $l['line']&&	$html.=" on line <b>{$l['line']}</b>";
+            $html.="\n";
         }
     }
-    print "\n</pre>";
+    $html.="\n</pre>";
+    $html	= str_replace('\\','/',$html);
+    $html	= str_replace(iPATH,'iCMS:/',$html);
+    exit($html);
 }

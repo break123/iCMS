@@ -99,7 +99,7 @@ if (!defined('iCMS_TPL_BUG'))
 	define('iCMS_TPL_BUG',$config['tpldebug']);
 
 error_reporting(iCMS_BUG?E_ALL ^ E_NOTICE:0);
-//set_error_handler('iCMS_error_handler');
+set_error_handler('iCMS_error_handler');
 define("__CN__",'/[\x01-\x7f]|[\xc2-\xdf][\x80-\xbf]|[\xe0-\xef][\x80-\xbf]{2}|[\xf0-\xff][\x80-\xbf]{3}/');
 define('__SELF__',dhtmlspecialchars($_SERVER['PHP_SELF']));
 define('__REF__',empty($_SERVER['HTTP_REFERER'])?'':dhtmlspecialchars($_SERVER['HTTP_REFERER']));
