@@ -22,7 +22,7 @@ class iCMS extends Template {
     public $mode='';
     public $dir='';
     public $actionSQL='';
-    public $_module_obj= null;
+    public $module= null;
 
     function __construct() {
         global $config,$_iCookie;
@@ -60,7 +60,7 @@ class iCMS extends Template {
         $this->register_modifier("small","gethumb");
         $this->register_modifier("thumb","small");
         $this->initCache();
-        $this->modules=array('index');
+        $this->modules	= array('index');
     }
     function run($m = null){
     	if(empty($m)){
@@ -70,18 +70,10 @@ class iCMS extends Template {
 		if (!in_array($m, $this->modules)){
 			exit('What are you doing?');
 		}
-		$this->load_module($m);
-		
-		$_method	= $_GET['o'];
-		if($_method){
-			if (!in_array($_method, $this->_module_obj->methods)){
-				exit($this->module_name." NOT Found '$_method'");
-			}
-			$method	= '_'.$_method;
-			$this->_module_obj->$method();
-		}
+		$this->module_init($m);
+		$this->module_start();
     }
-    function load_module($name){
+    function module_init($name){
     	$this->module_name	= $name;
     	$this->module_path	= iCMS_MODULE.'/'.$name;
     	$this->module_class	= $this->module_path.'/'.$name.'.class.php';
@@ -90,7 +82,18 @@ class iCMS extends Template {
 		}else{
 			exit("missing '$name module'");
 		}
-		$this->_module_obj = new $this->module_name;
+		$this->module = new $this->module_name;
+    }
+    function module_start(){
+		$_method	= $_GET['o'];
+		if($_method && $this->module->methods){
+			if (!in_array($_method, $this->module->methods)){
+				exit($this->module_name." NOT Found '$_method'");
+			}
+			$method	= '_'.$_method;
+			$args	= func_get_args();
+			$this->module->$method($args);
+		}
     }
     function initCache() {
         if(!isset($this->iCache)) {
