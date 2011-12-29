@@ -21,6 +21,7 @@ define('iCMS_CORE',iPATH."core");
 define('iCMS_CACHE',iPATH."cache");
 define('iCMS_MODULE',iPATH."module");
 define('iCMS_TPL',iPATH."template");
+define('iCMS_TPL_CACHE',iPATH."cache/tpl");
 
 header('Content-Type: text/html; charset=utf-8');
 function_exists('set_magic_quotes_runtime') && set_magic_quotes_runtime(0);
@@ -124,7 +125,6 @@ $config['url'] 		= $config['setupURL'];
 $config['dir'] 		= $uri['path'];
 $config['domain'] 	= substr($uri['host'],strpos($uri['host'],'.')+1);
 $iCMS = new iCMS;
-unset($config,$uri);
 isset($_GET['page']) && $page=(int)$_GET['page'];
 isset($GLOBALS['page']) && $GLOBALS['page']=(int)$GLOBALS['page'];
 

@@ -7,7 +7,9 @@
  */
 class index extends iCMS {
 	public $methods	= array('html');
-    function __construct() {}
+    function __construct() {
+    	parent::__construct();
+    }
     public function _html($a = null) {
     	$index_name	= $a[0];
     	$index_tpl	= $a[1];

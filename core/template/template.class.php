@@ -16,7 +16,7 @@ class Template {
 	var $force_compile			= false;	// force a compile regardless of saved state
 	var $template_dir			= "template";	// where the templates are to be found
 	var $plugins_dir			= array("plugins");	// where the plugins are to be found
-	var $compile_dir			= "cache";	// the directory to store the compiled files in
+	var $compile_dir			= "cache/tpl";	// the directory to store the compiled files in
 	
 	var $php_extract_vars		= false;	// Set this to true if you want the $this->_tpl variables to be extracted for use by PHP code inside the template.
 	var $php_handling 			= "iCMS_PHP_QUOTE";//2007-7-23 0:01 quote php tags
@@ -74,7 +74,7 @@ class Template {
 				break;
 		}
 	}
-
+	
 	function assign($key, $value = null){
 		if (is_array($key)){
 			foreach($key as $var => $val)

@@ -9,30 +9,39 @@
 * @version 6.0.0 (2012-02-14)
 */
 class iCMS extends Template {
-    public $config='';
-    public $id='';
-    public $title='';
-    public $cacheID='';
-    public $compileID='';
+    public $config	= array();
     public $firstcount=0;
-    public $pageurl='';
-    public $pagenav='';
+    public $pageurl	= null;
+    public $pagenav	= null;
     public $pagesize=0;
-    public $date=array();
-    public $mode='';
-    public $dir='';
-    public $actionSQL='';
-    public $module= null;
+    public $mode	= null;
+    public $module	= null;
+    public $iCache	= null;
 
     function __construct() {
-        global $config,$_iCookie;
-        $this->config        = $config;
-        $this->version        = Version;
-        $this->template_dir   = iCMS_TPL;
-        $this->compile_dir    = iCMS_CACHE.'/tpl';
-        $this->debugging    = false;
-        $this->left_delimiter    = '<!--{';
-        $this->right_delimiter    = '}-->';
+    	$this->config			= $GLOBALS['config'];
+    	$this->cookie			= $GLOBALS['_iCookie'];
+        $this->version			= Version;
+        $this->template_dir   	= iCMS_TPL;
+        $this->compile_dir    	= iCMS_TPL_CACHE;
+        $this->debugging    	= false;
+        $this->left_delimiter	= '<!--{';
+        $this->right_delimiter	= '}-->';
+        $this->dir        		= $this->config['dir'];
+        $this->register_modifier("date",	"get_date");
+        $this->register_modifier("cut",		"csubstr");
+        $this->register_modifier("htmlcut", "htmlSubString");
+        $this->register_modifier("count",	"cstrlen");
+        $this->register_modifier("html2txt","HtmToText");
+        $this->register_modifier("pinyin",	"GetPinyin");
+        $this->register_modifier("unicode", "getUNICODE");
+        $this->register_modifier("small",	"gethumb");
+        $this->register_modifier("thumb",	"small");
+        $this->SiteInit();
+        $this->CacheInit();
+        $this->modules	= array('index');
+    }
+    function SiteInit(){
         $this->assign("version", iCMS_VER);
         $this->assign("poweredby", '<a href="http://www.idreamsoft.com" target="_blank">iCMS</a> '.iCMS_VER);
         $this->assign('site',array("title"=>$this->config['name'],"seotitle"=>$this->config['seotitle'],
@@ -48,19 +57,7 @@ class iCMS extends Template {
                 "tplurl"    =>$this->config['url']."/template/".$this->config['template'],
                 "email"        =>$this->config['masteremail'],
                 "icp"        =>$this->config['icp']));
-        $this->assign("cookie", $_iCookie);
-        $this->dir        = $this->config['dir'];
-        $this->register_modifier("date",     "get_date");
-        $this->register_modifier("cut",     "csubstr");
-        $this->register_modifier("htmlcut", "htmlSubString");
-        $this->register_modifier("count",     "cstrlen");
-        $this->register_modifier("html2txt", "HtmToText");
-        $this->register_modifier("pinyin",     "GetPinyin");
-        $this->register_modifier("unicode", "getUNICODE");
-        $this->register_modifier("small","gethumb");
-        $this->register_modifier("thumb","small");
-        $this->initCache();
-        $this->modules	= array('index');
+        $this->assign("cookie", $this->cookie);
     }
     function run($m = null){
     	if(empty($m)){
@@ -70,10 +67,10 @@ class iCMS extends Template {
 		if (!in_array($m, $this->modules)){
 			exit('What are you doing?');
 		}
-		$this->module_init($m);
-		$this->module_start();
+		$this->moduleInit($m);
+		$this->moduleRun();
     }
-    function module_init($name){
+    function moduleInit($name){
     	$this->module_name	= $name;
     	$this->module_path	= iCMS_MODULE.'/'.$name;
     	$this->module_class	= $this->module_path.'/'.$name.'.class.php';
@@ -84,7 +81,7 @@ class iCMS extends Template {
 		}
 		$this->module = new $this->module_name;
     }
-    function module_start(){
+    function moduleRun(){
 		$_method	= $_GET['o'];
 		if($_method && $this->module->methods){
 			if (!in_array($_method, $this->module->methods)){
@@ -95,7 +92,7 @@ class iCMS extends Template {
 			$this->module->$method($args);
 		}
     }
-    function initCache() {
+    function CacheInit() {
         if(!isset($this->iCache)) {
         	switch($this->config['cacheEngine']){
         		case 'memcached':
