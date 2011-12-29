@@ -19,8 +19,8 @@ class iCMS extends Template {
     public $iCache	= null;
 
     function __construct() {
-    	$this->config			= $GLOBALS['config'];
-    	$this->cookie			= $GLOBALS['_iCookie'];
+    	$this->config			= & $GLOBALS['config'];
+    	$this->cookie			= & $GLOBALS['_iCookie'];
         $this->version			= Version;
         $this->template_dir   	= iCMS_TPL;
         $this->compile_dir    	= iCMS_TPL_CACHE;
@@ -59,37 +59,53 @@ class iCMS extends Template {
                 "icp"        =>$this->config['icp']));
         $this->assign("cookie", $this->cookie);
     }
-    function run($m = null){
-    	if(empty($m)){
+    /**
+     * 运行应用程序
+     * @param string $mo 模块名称
+     * @param string $do 动作名称
+     * @return iCMS
+     */
+    function run($do = NULL,$mo = NULL) {
+    	if(empty($mo)){
 	    	$fi	= FS::name(__SELF__);
-    		$m	= $fi['name'];
+    		$mo	= $fi['name'];
     	}
-		if (!in_array($m, $this->modules)){
-			exit('What are you doing?');
+		if (!in_array($mo, $this->modules)){
+			$this->throwException('应用程序运行出错.找不到应用程序:' . $mo, 1001);
 		}
-		$this->moduleInit($m);
-		$this->moduleRun();
-    }
-    function moduleInit($name){
-    	$this->module_name	= $name;
-    	$this->module_path	= iCMS_MODULE.'/'.$name;
-    	$this->module_class	= $this->module_path.'/'.$name.'.class.php';
-		if(FE($this->module_class)){
-			require_once($this->module_class);
+    	$this->module_name	= $mo;
+    	$this->module_path	= iCMS_MODULE.'/'.$mo;
+    	$this->module_file	= $this->module_path.'/'.$mo.'.class.php';
+    	
+		if(FE($this->module_file)){
+			require_once($this->module_file);
 		}else{
-			exit("missing '$name module'");
+			$this->throwException('应用程序运行出错.找不到文件:' . $this->module_name.'.class.php', 1002);
 		}
 		$this->module = new $this->module_name;
+		if(is_array($this->module->methods)){
+			array_push($this->module->methods,$this->module_name);
+		}else{
+			$this->module->methods=array($this->module_name);
+		}
+		$this->moduleRun();
     }
     function moduleRun(){
-		$_method	= $_GET['o'];
-		if($_method && $this->module->methods){
-			if (!in_array($_method, $this->module->methods)){
-				exit($this->module_name." NOT Found '$_method'");
+		$do	= $_GET['do'];
+		empty($do) && $do=$this->module_name;
+		if($do && $this->module->methods){
+			if (!in_array($do, $this->module->methods)){
+				$this->throwException('应用程序运行出错.类 ' .$this->module_name. ' 中找不到方法定义:do' . $do, 1003);
 			}
-			$method	= '_'.$_method;
+			$method	= 'do'.$do;
 			$args	= func_get_args();
-			$this->module->$method($args);
+			if($args){
+				$this->module->$method();
+			}else{
+				$this->module->$method($args);
+			}
+		}else{
+			$this->throwException('应用程序运行出错.类 ' .$this->module_name, 1004);
 		}
     }
     function CacheInit() {
@@ -269,4 +285,7 @@ class iCMS extends Template {
             exit;
         }
     }
+	function throwException($msg, $code) {
+	    trigger_error($msg . '(' . $code . ')');
+	}
 }

@@ -6,11 +6,11 @@
  * @author coolmoo <idreamsoft@qq.com>
  */
 class index extends iCMS {
-	public $methods	= array('html');
+	public $methods	= array();
     function __construct() {
     	parent::__construct();
     }
-    public function _html($a = null) {
+    public function doIndex($a = null) {
     	$index_name	= $a[0];
     	$index_tpl	= $a[1];
         empty($index_name)&& $index_name	= $this->config['indexname'];
