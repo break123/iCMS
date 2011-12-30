@@ -238,10 +238,12 @@ class Template {
 		unset($this->_plugins['outputfilter'][$function]);
 	}
 	
-
+	function tFE($f){
+		return @stat($f)===false?false:true;
+	}
 
 	function _get_resource($file){
-		if (FE($this->_get_dir($this->template_dir).$file)){
+		if ($this->tFE($this->_get_dir($this->template_dir).$file)){
 			$this->_resource_time = filemtime($this->_get_dir($this->template_dir).$file);
 			return $file;
 		}else{
@@ -307,7 +309,7 @@ class Template {
 		$name = $this->_name($file);
 		$cacheFilename = $this->compile_dir.$this->reserved_template_varname."_".$name;
 
-		if (!$this->force_compile && FE($cacheFilename) && (filemtime($cacheFilename) > $this->_resource_time) && (filemtime($cacheFilename) > $this->_version_date)){
+		if (!$this->force_compile && $this->tFE($cacheFilename) && (filemtime($cacheFilename) > $this->_resource_time) && (filemtime($cacheFilename) > $this->_version_date)){
 			if ($eval) {
 				ob_start();
 				include($cacheFilename);
@@ -372,7 +374,7 @@ class Template {
 	function _run_iCMS($arguments){
 		if (!function_exists('iCMS_' . $arguments['module'])){
 			$modulefile=iPATH . "include/function/iCMS.".$arguments['module'].".php";
-			if(FE($modulefile)){
+			if($this->tFE($modulefile)){
 				require_once($modulefile);
 			}else{
 				$this->trigger_error("function 'iCMS_" . $arguments['module'] . "' does not exist in 'iCMS'", E_USER_ERROR);
@@ -408,7 +410,7 @@ class Template {
 		foreach ($_plugin_dir_list as $_plugin_dir){
 			if (!preg_match("/^([\/\\\\]|[a-zA-Z]:[\/\\\\])/", $_plugin_dir)){
 				// path is relative
-				if (FE(dirname(__FILE__) . DIRECTORY_SEPARATOR . $_plugin_dir . DIRECTORY_SEPARATOR . $plugin_name)){
+				if ($this->tFE(dirname(__FILE__) . DIRECTORY_SEPARATOR . $_plugin_dir . DIRECTORY_SEPARATOR . $plugin_name)){
 					$plugin_dir_path = dirname(__FILE__) . DIRECTORY_SEPARATOR . $_plugin_dir . DIRECTORY_SEPARATOR;
 					break;
 				}
@@ -430,7 +432,7 @@ class Template {
 				}
 
 				foreach ($_path_array as $_include_path){
-					if (FE($_include_path . DIRECTORY_SEPARATOR . $plugin_name)){
+					if ($this->tFE($_include_path . DIRECTORY_SEPARATOR . $plugin_name)){
 						$plugin_dir_path = $_include_path . DIRECTORY_SEPARATOR;
 						break 2;
 					}
@@ -1259,7 +1261,7 @@ class Template_Compiler extends Template {
 			return $this->_plugins[$type][$function];
 		}
 		// check for a plugin in the plugin directory
-		if (FE($this->_get_plugin_dir($type . '.' . $function . '.php') . $type . '.' . $function . '.php')){
+		if ($this->tFE($this->_get_plugin_dir($type . '.' . $function . '.php') . $type . '.' . $function . '.php')){
 			require_once($this->_get_plugin_dir($type . '.' . $function . '.php') . $type . '.' . $function . '.php');
 			if (function_exists('tpl_' . $type . '_' . $function)){
 				$this->_require_stack[$type . '.' . $function . '.php'] = array($type, $function, 'tpl_' . $type . '_' . $function);
