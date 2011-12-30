@@ -9,11 +9,11 @@
 * @version 6.0.0 (2012-02-14)
 */
 // 数据库名
-define('DB_NAME', 		'icms6');
+define('DB_NAME', 		'icms');
 // 数据库用户
 define('DB_USER', 		'root');
 //数据库密码
-define('DB_PASSWORD', 		'123456');
+define('DB_PASSWORD', 		'');
 // 服务器名或服务器ip,一般为localhost
 define('DB_HOST', 		'localhost');
 /*MYSQL编码设置.如果您的程序出现乱码现象，需要设置此项来修复.

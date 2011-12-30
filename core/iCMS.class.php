@@ -108,6 +108,9 @@ class iCMS extends Template {
 			$this->throwException('应用程序运行出错.类 ' .$this->module_name, 1004);
 		}
     }
+    function load_module($name){
+    	 return iCMS_MODULE.'/'.$name.'/'.$name.'.class.php';
+    }
     function CacheInit() {
         if(!isset($this->iCache)) {
         	switch($this->config['cacheEngine']){
