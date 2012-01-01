@@ -1,0 +1,346 @@
+@charset "utf-8";
+/* CSS Document */
+
+ .text, a.text {
+	color: #666666;
+}
+.window_current .text, .window_current a.text {
+	color: #333333;
+}
+.titleText, a.titleText {
+	color: #6d6d6d;
+	font-weight: bold;
+}
+.window_current .titleText, .window_current a.titleText {
+	color: #393836;
+}
+.appText a {
+	color: white;
+}
+.toolBar_bg {
+	background: url(./skin/sprite_repeat_x_png.png) repeat-x 0 -140px;
+}
+.ie6_0 .toolBar_bg, .ie7_0 .toolBar_bg {
+	background: nonde;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="./skin/toolbar_bg.png", sizingMethod="scale");
+}
+.window {
+	background: url(./skin/transparent.gif) repeat;
+}
+.window_title {
+	height: 25px;
+	text-align:center;
+}
+.window_titleBar {
+	height: 25px;
+	background: url(./skin/sprite_repeat_x_png.png) repeat 0 -1px;
+}
+.window_current .window_titleBar {
+	background: url(./skin/sprite_repeat_x_png.png) repeat 0 -31px;
+}
+.window_titleButtonBar {
+	overflow:hidden;
+	right:5px;
+	position:absolute;
+	top:4px;
+}
+.window_toolButtonBar {
+	overflow:hidden;
+	left:0;
+	position:absolute;
+	top:2px;
+	z-index:10;
+}
+.window_bodyArea {
+	top: 0;
+}
+.window_controlArea {
+	background: url(./skin/sprite_repeat_x_png.png) repeat-x 0 -60px;
+}
+.window_current .window_controlArea {
+	background: url(./skin/sprite_repeat_x_png.png) repeat-x 0 -100px;
+}
+.window_bodyOuter {
+	background: #E9E9E9;
+	;
+}
+a.window_action_button {
+	height: 19px;
+	width: 21px;
+	background: url(./skin/sprite_main_png.png) no-repeat -122px -22px;
+}
+.ie6_0 a.window_action_button, .ie7_0 a.window_action_button {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+a.window_close {
+	background-position: -64px -59px;
+}
+a.window_close:hover {
+	background-position: -64px -30px;
+}
+a.window_max {
+	background-position: -34px -59px;
+}
+a.window_max:hover {
+	background-position: -34px -30px;
+}
+a.window_fullscreen {
+	background-position: -34px -24px;
+}
+a.window_fullscreen:hover {
+	background-position: -34px -53px;
+}
+a.window_restore_full {
+	background-position: -152px -24px;
+}
+a.window_restore_full:hover {
+	background-position: -152px -53px;
+}
+a.window_restore {
+	background-position: -94px -59px;
+}
+a.window_restore:hover {
+	background-position: -94px -30px;
+}
+a.window_min {
+	background-position: -5px -58px;
+}
+a.window_min:hover {
+	background-position: -5px -30px;
+}
+a.window_refresh {
+	background-position: -5px -24px;
+}
+a.window_refresh:hover {
+	background-position: -5px -53px;
+}
+a.window_pinUp {
+	background-position: -182px -24px;
+}
+a.window_pinUp:hover {
+	background-position: -182px -53px;
+}
+a.window_pinDown {
+	background-position: -152px -24px;
+}
+a.window_pinDown:hover {
+	background-position: -152px -53px;
+}
+a.window_button {
+	background: url(./skin/sprite_main_png.png) 0 -80px no-repeat;
+}
+a.window_button:hover {
+	background-position: 0 -86px;
+}
+a.window_ok {
+	background-position: 0 -86px;
+	margin-right:5px;
+}
+a.window_ok:hover {
+	background-position: 0 -86px;
+}
+a.window_cancel {
+	background-position: 0 -86px;
+	margin-right:5px;
+}
+a.window_cancel:hover {
+	background-position: 0 -86px;
+}
+a.window_previous {
+	background-position: 0 -86px;
+}
+a.window_previous:hover {
+	background-position: 0 -86px;
+}
+a.window_next {
+	background-position: 0 -86px;
+}
+a.window_next:hover {
+	background-position: 0 -86px;
+}
+.window_bg_container_ipad {
+	background-color: rgba(232, 232, 232, .8);
+}
+.window_current .window_bg_container_ipad {
+	background-color: rgba(232, 232, 232, 1);
+}
+.window_center {
+	background: url(./skin/window.png) top left repeat;
+}
+.ie6_0 .window_center, .ie7_0 .window_center {
+	background: #C4C4C4;
+}
+.window_current .window_center {
+	background: url(./skin/window_cur.png) top left repeat;
+}
+.ie6_0 .window_current .window_center, .ie7_0 .window_current .window_center {
+	background: #e8e8e8;
+}
+.window_t {
+	background: url(./skin/sprite_repeat_x_png.png) repeat-x 0 -80px;
+}
+.ie6_0 .window_t, .ie7_0 .window_t {
+	background-image: url(./skin/sprite_repeat_x_gif.gif);
+}
+.window_current .window_t {
+	background-position: 0 -100px;
+}
+.window_rt {
+	background: url(./skin/sprite_main_png.png) no-repeat -10px 0;
+}
+.ie6_0 .window_rt, .ie7_0 .window_rt {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+.window_current .window_rt {
+	background-position: -30px 0;
+}
+.window_r {
+	background: url(./skin/sprite_repeat_y_png.png) repeat-y -10px 0;
+}
+.ie6_0 .window_r, .ie7_0 .window_r {
+	background-image: url(./skin/sprite_repeat_y_gif.gif);
+}
+.window_current .window_r {
+	background-position: -30px 0;
+}
+.window_rb {
+	background: url(./skin/sprite_main_png.png) no-repeat -10px -10px;
+}
+.ie6_0 .window_rb, .ie7_0 .window_rb {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+.window_current .window_rb {
+	background-position: -30px -10px;
+}
+.window_b {
+	background: url(./skin/sprite_repeat_x_png.png) repeat-x 0 -90px;
+}
+.ie6_0 .window_b, .ie7_0 .window_b {
+	background-image: url(./skin/sprite_repeat_x_gif.gif);
+}
+.window_current .window_b {
+	background-position: 0 -110px;
+}
+.window_lb {
+	background: url(./skin/sprite_main_png.png) no-repeat 0 -10px;
+}
+.ie6_0 .window_lb, .ie7_0 .window_lb {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+.window_current .window_lb {
+	background-position: -20px -10px;
+}
+.window_l {
+	background: url(./skin/sprite_repeat_y_png.png) repeat-y 0 0;
+}
+.ie6_0 .window_l, .ie7_0 .window_l {
+	background-image: url(./skin/sprite_repeat_y_gif.gif);
+}
+.window_current .window_l {
+	background-position: -20px 0;
+}
+.window_lt {
+	background: url(./skin/sprite_main_png.png) no-repeat 0 0;
+}
+.ie6_0 .window_lt, .ie7_0 .window_lt {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+.window_current .window_lt {
+	background-position: -20px 0;
+}
+.ie6_0 .statusBar_line, .ie7_0 .statusBar_line {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+.panel_1_center {
+	background: url(./skin/panel_1_c.png) top left repeat;
+}
+.ie6_0 .panel_1_center, .ie7_0 .panel_1_center {
+	background: #fff;
+}
+.panel_1_t {
+	background: url(./skin/sprite_repeat_x_png.png) repeat-x 0 -125px;
+}
+.ie6_0 .panel_1_t, .ie7_0 .panel_1_t {
+	background-image: url(./skin/sprite_repeat_x_gif.gif);
+}
+.panel_1_rt {
+	background: url(./skin/sprite_main_png.png) no-repeat -50px -5px;
+}
+.ie6_0 .panel_1_rt, .ie7_0 .panel_1_rt {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+.panel_1_r {
+	background: url(./skin/sprite_repeat_y_png.png) repeat-y -50px 0;
+}
+.ie6_0 .panel_1_r, .ie7_0 .panel_1_r {
+	background-image: url(./skin/sprite_repeat_y_gif.gif);
+}
+.panel_1_rb {
+	background: url(./skin/sprite_main_png.png) no-repeat -50px -10px;
+}
+.ie6_0 .panel_1_rb, .ie7_0 .panel_1_rb {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+.panel_1_b {
+	background: url(./skin/sprite_repeat_x_png.png) repeat-x 0 -130px;
+}
+.ie6_0 .panel_1_b, .ie7_0 .panel_1_b {
+	background-image: url(./skin/sprite_repeat_x_gif.gif);
+}
+.panel_1_lb {
+	background: url(./skin/sprite_main_png.png) no-repeat -45px -10px;
+}
+.ie6_0 .panel_1_lb, .ie7_0 .panel_1_lb {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+.panel_1_l {
+	background: url(./skin/sprite_repeat_y_png.png) repeat-y -45px 0;
+}
+.ie6_0 .panel_1_l, .ie7_0 .panel_1_l {
+	background-image: url(./skin/sprite_repeat_y_gif.gif);
+}
+.panel_1_lt {
+	background: url(./skin/sprite_main_png.png) no-repeat -45px -5px;
+}
+.ie6_0 .panel_1_lt, .ie7_0 .panel_1_lt {
+	background-image: url(./skin/sprite_main_gif.gif);
+}
+#navbar {
+	height: 40px;
+	_height: 28px;
+}
+.indicator_wrapper {
+	background:url(./skin/sprite_main_png.png) no-repeat -140px -5px;
+	_background-image: url(./skin/sprite_main_gif.gif);
+	top: 0;
+	position: static;
+}
+.indicator, .indicator_icon_bg, .indicator_icon {
+	background-image: url(./skin/sprite_main_png.png);
+	_background-image: url(./skin/sprite_main_gif.gif);
+}
+.no_sysbtn .indicator_wrapper {
+	background-position: -140px -45px;
+}
+.no_sysbtn .indicator_header {
+	margin-right: 6px;
+}
+#navbar .system_button {
+	background: url(./skin/sprite_main_png.png) no-repeat 134px -98px;
+	_background-image: url(./skin/sprite_main_gif.gif);
+}
+.pagelet_search_bar, .pagelet_search_button, #pagelet_search_suggest .sb_page, #pagelet_search_suggest .sb_app, #pagelet_search_suggest a:hover, #pagelet_search_suggest .rsSeledBg, .pagelet_search_pointer {
+	background-image: url(./skin/sprite_main_png.png);
+	_background-image: url(./skin/sprite_main_gif.gif);
+}
+#pagelet_search_suggest #sb_resultBox {
+	background: url(./skin/suggess_list_bg.png) repeat-y;
+	_background-image: url(./skin/suggess_list_bg.gif);
+}
+.mobileSafari #navbar {
+	width:222px;
+}
+.mobileSafari #navbar .system_button {
+	display:none;
+	visibility:visible;
+}
