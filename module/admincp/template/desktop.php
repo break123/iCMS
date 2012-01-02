@@ -1,13 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html class=" javascriptEnabled win win5_1 chrome chrome15_0 webkit webkit535_2 flash flash11_0" style="overflow-x: hidden; overflow-y: hidden; ">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>iCMS后台管理</title>
 <link href="module/admincp/css/reset.css" rel="stylesheet" type="text/css" />
 <link href="module/admincp/css/desktop.css" rel="stylesheet" type="text/css" />
+<link href="module/admincp/css/desktop.2.css" rel="stylesheet" type="text/css" />
+<link href="module/admincp/css/ui/theme.css" rel="stylesheet" type="text/css" id="skincss"/>
 <link href="module/admincp/css/skin.css" rel="stylesheet" type="text/css" id="skincss"/>
 <script type="text/javascript" src="module/admincp/js/jquery.js?1.6.2"></script>
 <script type="text/javascript" src="module/admincp/js/jquery-ui.js?1.8.16"></script>
+<script type="text/javascript" src="module/admincp/js/jquery.blockUI.js"></script>
 </head>
 
 <body>
@@ -98,103 +101,7 @@
   <div id="bottomBar" class="bottomBar"></div>
   <div id="desktopWrapper" style="left: 73px; right: 0px; ">
     <div id="desktopsContainer" class="desktopsContainer desktopsContainerEx" style="top: 0px; width: 1367px; height: 749px; ">
-      <div index="0" class="desktopContainer" style="left: 1440px; width: 1367px; height: 749px; ">
-        <div class="appListContainer" customacceptdrop="1" index="0" style="overflow-y: hidden; display: block; opacity: 1; width: 1339px; margin-left: 28px; height: 703px; margin-top: 46px; " _olddisplay="">
-          <div class="scrollBar" style="height: 0px; display: none; " _olddisplay=""></div>
-          <div class="appButton addQuickLinkButton" title="添加" screen="0" style="left: 27px; top: 460px; ">
-            <div class="addQuickLinkButtonInner"></div>
-            <div class="appButton_appName">
-              <div class="appButton_appName_inner">添加</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-          </div>
-          <div appid="48" fileid="48" type="app" id="alloy_icon_app_48_16" uid="app_48" class="appButton " title="欢乐斗地主" style="left: 27px; top: 12px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_48_16_icon_div" style=""><img id="alloy_icon_app_48_16_img" class="appButton_appIconImg" src="http://8.web.qstatic.com/webqqpic/pubapps/0/48/images/big.png" alt="欢乐斗地主"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_48_16_name" class="appButton_appName_inner">欢乐斗地主</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_48_16_delete" title="卸载应用"></div>
-          </div>
-          <div appid="49" fileid="49" type="app" id="alloy_icon_app_49_17" uid="app_49" class="appButton " title="3366" style="left: 27px; top: 124px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_49_17_icon_div" style=""><img id="alloy_icon_app_49_17_img" class="appButton_appIconImg" src="http://9.web.qstatic.com/webqqpic/pubapps/0/49/images/big.png" alt="3366"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_49_17_name" class="appButton_appName_inner">3366</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_49_17_delete" title="卸载应用"></div>
-          </div>
-          <div appid="26" fileid="26" type="app" id="alloy_icon_app_26_18" uid="app_26" class="appButton " title="QQ宝贝" style="left: 27px; top: 236px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_26_18_icon_div" style=""><img id="alloy_icon_app_26_18_img" class="appButton_appIconImg" src="http://6.web.qstatic.com/webqqpic/pubapps/0/26/images/big.png" alt="QQ宝贝"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_26_18_name" class="appButton_appName_inner">QQ宝贝</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_26_18_delete" title="卸载应用"></div>
-          </div>
-          <div fileid="1000" type="dir" id="alloy_icon_dir_1000_19" uid="dir_1000" class="appButton " title="游戏" style="left: 27px; top: 348px; ">
-            <div class="appButton_appIcon " id="alloy_icon_dir_1000_19_icon_div" style=""><img id="alloy_icon_dir_1000_19_img" class="appButton_appIconImg" src="http://0.web.qstatic.com/webqqpic/style/images/filesys/folder_o.png?t=20111011001" alt="游戏"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_dir_1000_19_name" class="appButton_appName_inner">游戏</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_dir_1000_19_delete" title="删除文件夹"></div>
-          </div>
-        </div>
-      </div>
-      <div index="1" class="desktopContainer" style="left: 1440px; width: 1367px; height: 749px; ">
-        <div class="appListContainer" customacceptdrop="1" index="1" style="overflow-y: hidden; width: 1339px; margin-left: 28px; height: 703px; margin-top: 46px; display: block; opacity: 1; " _olddisplay="">
-          <div class="scrollBar" style="height: 0px; display: none; " _olddisplay=""></div>
-          <div class="appButton addQuickLinkButton" title="添加" screen="1" style="left: 27px; top: 572px; ">
-            <div class="addQuickLinkButtonInner"></div>
-            <div class="appButton_appName">
-              <div class="appButton_appName_inner">添加</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-          </div>
-          <div appid="3401" fileid="3401" type="app" id="alloy_icon_app_3401_20" uid="app_3401" class="appButton " title="芒果旅游" style="left: 27px; top: 12px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_3401_20_icon_div" style=""><img id="alloy_icon_app_3401_20_img" class="appButton_appIconImg" src="http://1.web.qstatic.com/webqqpic/pubapps/3/3401/images/big.png" alt="芒果旅游"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_3401_20_name" class="appButton_appName_inner">芒果旅游</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_3401_20_delete" title="卸载应用"></div>
-          </div>
-          <div appid="2527" fileid="2527" type="app" id="alloy_icon_app_2527_21" uid="app_2527" class="appButton " title="团购地图" style="left: 27px; top: 124px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_2527_21_icon_div" style=""><img id="alloy_icon_app_2527_21_img" class="appButton_appIconImg" src="http://7.web.qstatic.com/webqqpic/pubapps/2/2527/images/big.png" alt="团购地图"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_2527_21_name" class="appButton_appName_inner">团购地图</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_2527_21_delete" title="卸载应用"></div>
-          </div>
-          <div appid="3693" fileid="3693" type="app" id="alloy_icon_app_3693_22" uid="app_3693" class="appButton " title="快递查询" style="left: 27px; top: 236px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_3693_22_icon_div" style=""><img id="alloy_icon_app_3693_22_img" class="appButton_appIconImg" src="http://3.web.qstatic.com/webqqpic/pubapps/3/3693/images/big.png" alt="快递查询"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_3693_22_name" class="appButton_appName_inner">快递查询</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_3693_22_delete" title="卸载应用"></div>
-          </div>
-          <div appid="10" fileid="10" type="app" id="alloy_icon_app_10_23" uid="app_10" class="appButton " title="便签" style="left: 27px; top: 348px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_10_23_icon_div" style=""><img id="alloy_icon_app_10_23_img" class="appButton_appIconImg" src="http://0.web.qstatic.com/webqqpic/pubapps/0/10/images/big.png" alt="便签"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_10_23_name" class="appButton_appName_inner">便签</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_10_23_delete" title="卸载应用"></div>
-          </div>
-          <div appid="13" fileid="13" type="app" id="alloy_icon_app_13_24" uid="app_13" class="appButton not_deleteable" title="网络硬盘" style="left: 27px; top: 460px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_13_24_icon_div" style=""><img id="alloy_icon_app_13_24_img" class="appButton_appIconImg" src="http://3.web.qstatic.com/webqqpic/pubapps/0/13/images/big.png" alt="网络硬盘"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_13_24_name" class="appButton_appName_inner">网络硬盘</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_13_24_delete" title="卸载应用"></div>
-          </div>
-        </div>
-      </div>
-      <div index="2" class="desktopContainer desktop_current desktop_current_noanimation" style="left: 1440px; width: 1367px; height: 749px; ">
+      <div index="2" class="desktopContainer desktop_current desktop_show_prepare1 desktop_show_animation1" style="left: 1440px; width: 1367px; height: 749px; ">
         <div class="appListContainer" customacceptdrop="1" index="2" style="overflow-y: hidden; display: block; opacity: 1; width: 1339px; margin-left: 28px; height: 703px; margin-top: 46px; " _olddisplay="">
           <div class="scrollBar" style="height: 0px; display: none; " _olddisplay=""></div>
           <div class="appButton addQuickLinkButton" title="添加" screen="2" style="left: 169px; top: 348px; ">
@@ -347,118 +254,51 @@
             </div>
           </div>
         </div>
-      </div>
-      <div index="3" class="desktopContainer" style="left: 1440px; width: 1367px; height: 749px; ">
-        <div class="appListContainer" customacceptdrop="1" index="3" style="overflow-y: hidden; width: 1339px; margin-left: 28px; height: 703px; margin-top: 46px; display: block; opacity: 1; " _olddisplay="">
-          <div class="scrollBar" style="height: 0px; display: none; " _olddisplay=""></div>
-          <div class="appButton addQuickLinkButton" title="添加" screen="3" style="left: 169px; top: 12px; ">
-            <div class="addQuickLinkButtonInner"></div>
-            <div class="appButton_appName">
-              <div class="appButton_appName_inner">添加</div>
-              <div class="appButton_appName_inner_right"></div>
+        <div id="appWindow_2" class="window window_current" style="display: block; visibility: visible; width: 602px; height: 500px; left: 318px; top: 140px; z-index: 22; ">
+        <div id="window_outer_2" class="window_outer" style="z-index: 13; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; height: 478px; ">
+          <div id="window_inner_2" class="window_inner" style="z-index: 22; ">
+            <div class="window_bg_container" id="window_bg_container_2"></div>
+            <div class="window_content">
+              <div id="window_titleBar_2" class="window_titleBar">
+                <div id="window_toolButtonBar_2" class="window_toolButtonBar"></div>
+                <div id="window_titleButtonBar_2" class="window_titleButtonBar"><a id="ui_button_6" class="ui_button window_action_button window_close" title="关闭" hidefocus="" href="###" style="display: block; "></a></div>
+                <div id="window_title_2" class="window_title titleText">系统设置</div>
+              </div>
+              <div id="window_body_outer_2" class="window_bodyOuter" style="width: 580px; top: 25px; height: 452px; ">
+                <div id="window_toolBar_2" class="window_toolBar"></div>
+                <div id="window_toggleToolbar_2" class="app_toolbar_icon app_toolbar_toggle app_toolbar_toggle_up" style="display:none"></div>
+                <div id="window_body_2" class="window_bodyArea" style="width: 580px; height: 452px; ">
+                  <div class="settingCenter_area">
+                    <div id="settingCenter_globalSettingBody" class="settingCenter_globalSettingBody"> <a class="settingCenter_settingButton" appid="themeSetting" report="theme" href="###">
+                      <div class="settingButton_icon settingButton_themeIcon"></div>
+                      <div class="settingButton_text">主题</div>
+                      </a> <a class="settingCenter_settingButton" appid="appMarket" report="market" href="###">
+                      <div class="settingButton_icon settingButton_marketIcon"></div>
+                      <div class="settingButton_text">应用市场</div>
+                      </a> <a class="settingCenter_settingButton" appid="notifySetting" report="notify" href="###">
+                      <div class="settingButton_icon settingButton_notifySettingIcon"></div>
+                      <div class="settingButton_text">QQ提醒</div>
+                      </a> <a class="settingCenter_settingButton" appid="notifications" report="notifications" href="###">
+                      <div class="settingButton_icon settingButton_notificationsIcon"></div>
+                      <div class="settingButton_text">通知设置</div>
+                      </a> <a class="settingCenter_settingButton" appid="hotkeySetting" report="hotkey" href="###">
+                      <div class="settingButton_icon settingButton_hotkeySettingIcon"></div>
+                      <div class="settingButton_text">热键</div>
+                      </a> <a class="settingCenter_settingButton" appid="restoreSetting" report="sysrecover" href="###">
+                      <div class="settingButton_icon settingButton_restoreSetting"></div>
+                      <div class="settingButton_text">系统还原</div>
+                      </a> <a class="settingCenter_settingButton" appid="desktopSetting" report="desktopsetting" href="###">
+                      <div class="settingButton_icon settingButton_desktopSetting"></div>
+                      <div class="settingButton_text">桌面设置</div>
+                      </a> </div>
+                  </div>
+                </div>
+              </div>
+              <div id="window_controlArea_2" class="window_controlArea" _olddisplay="" style="display: none; "> </div>
             </div>
-          </div>
-          <div appid="2528" fileid="2528" type="app" id="alloy_icon_app_2528_25" uid="app_2528" class="appButton " title="起点中文" style="left: 27px; top: 12px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_2528_25_icon_div" style=""><img id="alloy_icon_app_2528_25_img" class="appButton_appIconImg" src="http://8.web.qstatic.com/webqqpic/pubapps/2/2528/images/big.png" alt="起点中文"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_2528_25_name" class="appButton_appName_inner">起点中文</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_2528_25_delete" title="卸载应用"></div>
-          </div>
-          <div appid="45" fileid="45" type="app" id="alloy_icon_app_45_26" uid="app_45" class="appButton " title="QQ阅读" style="left: 27px; top: 124px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_45_26_icon_div" style=""><img id="alloy_icon_app_45_26_img" class="appButton_appIconImg" src="http://5.web.qstatic.com/webqqpic/pubapps/0/45/images/big.png" alt="QQ阅读"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_45_26_name" class="appButton_appName_inner">QQ阅读</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_45_26_delete" title="卸载应用"></div>
-          </div>
-          <div appid="2526" fileid="2526" type="app" id="alloy_icon_app_2526_27" uid="app_2526" class="appButton " title="虾米电台" style="left: 27px; top: 236px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_2526_27_icon_div" style=""><img id="alloy_icon_app_2526_27_img" class="appButton_appIconImg" src="http://6.web.qstatic.com/webqqpic/pubapps/2/2526/images/big.png" alt="虾米电台"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_2526_27_name" class="appButton_appName_inner">虾米电台</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_2526_27_delete" title="卸载应用"></div>
-          </div>
-          <div appid="56" fileid="56" type="app" id="alloy_icon_app_56_28" uid="app_56" class="appButton " title="音乐盒子" style="left: 27px; top: 348px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_56_28_icon_div" style=""><img id="alloy_icon_app_56_28_img" class="appButton_appIconImg" src="http://6.web.qstatic.com/webqqpic/pubapps/0/56/images/big.png" alt="音乐盒子"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_56_28_name" class="appButton_appName_inner">音乐盒子</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_56_28_delete" title="卸载应用"></div>
-          </div>
-          <div appid="15" fileid="15" type="app" id="alloy_icon_app_15_29" uid="app_15" class="appButton " title="腾讯视频" style="left: 27px; top: 460px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_15_29_icon_div" style=""><img id="alloy_icon_app_15_29_img" class="appButton_appIconImg" src="http://5.web.qstatic.com/webqqpic/pubapps/0/15/images/big.png" alt="腾讯视频"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_15_29_name" class="appButton_appName_inner">腾讯视频</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_15_29_delete" title="卸载应用"></div>
-          </div>
-          <div appid="3148" fileid="3148" type="app" id="alloy_icon_app_3148_30" uid="app_3148" class="appButton " title="乐视网" style="left: 27px; top: 572px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_3148_30_icon_div" style=""><img id="alloy_icon_app_3148_30_img" class="appButton_appIconImg" src="http://8.web.qstatic.com/webqqpic/pubapps/3/3148/images/big.png" alt="乐视网"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_3148_30_name" class="appButton_appName_inner">乐视网</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_3148_30_delete" title="卸载应用"></div>
           </div>
         </div>
       </div>
-      <div index="4" class="desktopContainer" style="left: 1440px; width: 1367px; height: 749px; ">
-        <div class="appListContainer" customacceptdrop="1" index="4" style="overflow-y: hidden; width: 1339px; margin-left: 28px; height: 703px; margin-top: 46px; display: block; opacity: 1; " _olddisplay="">
-          <div class="scrollBar" style="height: 0px; display: none; " _olddisplay=""></div>
-          <div class="appButton addQuickLinkButton" title="添加" screen="4" style="left: 27px; top: 572px; ">
-            <div class="addQuickLinkButtonInner"></div>
-            <div class="appButton_appName">
-              <div class="appButton_appName_inner">添加</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-          </div>
-          <div appid="21" fileid="21" type="app" id="alloy_icon_app_21_31" uid="app_21" class="appButton " title="朋友网" style="left: 27px; top: 12px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_21_31_icon_div" style=""><img id="alloy_icon_app_21_31_img" class="appButton_appIconImg" src="http://1.web.qstatic.com/webqqpic/pubapps/0/21/images/big.png" alt="朋友网"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_21_31_name" class="appButton_appName_inner">朋友网</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_21_31_delete" title="卸载应用"></div>
-          </div>
-          <div appid="7" fileid="7" type="app" id="alloy_icon_app_7_32" uid="app_7" class="appButton " title="好友近况" style="left: 27px; top: 124px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_7_32_icon_div" style=""><img id="alloy_icon_app_7_32_img" class="appButton_appIconImg" src="http://7.web.qstatic.com/webqqpic/pubapps/0/7/images/big.png" alt="好友近况"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_7_32_name" class="appButton_appName_inner">好友近况</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_7_32_delete" title="卸载应用"></div>
-          </div>
-          <div appid="5" fileid="5" type="app" id="alloy_icon_app_5_33" uid="app_5" class="appButton " title="好友管理" style="left: 27px; top: 236px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_5_33_icon_div" style=""><img id="alloy_icon_app_5_33_img" class="appButton_appIconImg" src="http://5.web.qstatic.com/webqqpic/pubapps/0/5/images/big.png" alt="好友管理"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_5_33_name" class="appButton_appName_inner">好友管理</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_5_33_delete" title="卸载应用"></div>
-          </div>
-          <div appid="2250" fileid="2250" type="app" id="alloy_icon_app_2250_34" uid="app_2250" class="appButton " title="开开" style="left: 27px; top: 348px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_2250_34_icon_div" style=""><img id="alloy_icon_app_2250_34_img" class="appButton_appIconImg" src="http://0.web.qstatic.com/webqqpic/pubapps/2/2250/images/big.png" alt="开开"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_2250_34_name" class="appButton_appName_inner">开开</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_2250_34_delete" title="卸载应用"></div>
-          </div>
-          <div appid="2535" fileid="2535" type="app" id="alloy_icon_app_2535_35" uid="app_2535" class="appButton " title="开心交友" style="left: 27px; top: 460px; ">
-            <div class="appButton_appIcon " id="alloy_icon_app_2535_35_icon_div" style=""><img id="alloy_icon_app_2535_35_img" class="appButton_appIconImg" src="http://5.web.qstatic.com/webqqpic/pubapps/2/2535/images/big.png" alt="开心交友"></div>
-            <div class="appButton_appName">
-              <div id="alloy_icon_app_2535_35_name" class="appButton_appName_inner">开心交友</div>
-              <div class="appButton_appName_inner_right"></div>
-            </div>
-            <div class="appButton_delete" id="alloy_icon_app_2535_35_delete" title="卸载应用"></div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -479,6 +319,15 @@ $(function(){
 		$('#startingCover').hide();
 //	},3500);
 	$('#zoomWallpaperGrid,#zoomWallpaper').css({width:_width,height:_height});
+	
+//    $('#demo13').click(function() { 
+        $.blockUI({ 
+            theme:     true, 
+            title:    'This is your title', 
+            message:  '<p>This is your message.</p>'
+           // timeout:   2000 
+        }); 
+//    });   
 })
 
 </script>
