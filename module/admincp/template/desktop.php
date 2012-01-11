@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html class=" javascriptEnabled win win5_1 chrome chrome15_0 webkit webkit535_2 flash flash11_0" style="overflow-x: hidden; overflow-y: hidden; ">
+<html class=" javascriptEnabled win win5_1" style="overflow-x: hidden; overflow-y: hidden; ">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>iCMS后台管理</title>
@@ -9,8 +9,8 @@
 <link href="module/admincp/css/ui/theme.css" rel="stylesheet" type="text/css" id="skincss"/>
 <link href="module/admincp/css/skin.css" rel="stylesheet" type="text/css" id="skincss"/>
 <script type="text/javascript" src="module/admincp/js/jquery.js?1.6.2"></script>
-<script type="text/javascript" src="module/admincp/js/jquery-ua.js?1.8.16"></script>
-<script type="text/javascript" src="module/admincp/js/jquery.blockUa.js"></script>
+<script type="text/javascript" src="module/admincp/js/jquery-ui.js?1.8.16"></script>
+<script type="text/javascript" src="module/admincp/js/jquery.blockUI.js"></script>
 </head>
 
 <body>
@@ -102,76 +102,43 @@
 <div id="desktopWrapper" style="left:73px;">
   <div id="desktopsContainer" class="desktopsContainer">
     <div class="desktopContainer desktop_current">
-      <div class="appListContainer" style="display: block;margin-left: 28px;margin-top: 46px; opacity: 1;">
-        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px;">
-          <div style="" id="alloy_icon_app_8992_7_icon_div" class="appButton_appIcon "><img alt="金山快盘" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" class="appButton_appIconImg" id="alloy_icon_app_8992_7_img"></div>
-          <div class="appButton_appName">
-            <div class="appButton_appName_inner" id="alloy_icon_app_8992_7_name">金山快盘</div>
-            <div class="appButton_appName_inner_right"></div>
-          </div>
-          <div title="卸载应用" id="alloy_icon_app_8992_7_delete" class="appButton_delete"></div>
-        </div>
-        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px;">
-          <div style="" id="alloy_icon_app_8992_7_icon_div" class="appButton_appIcon "><img alt="金山快盘" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" class="appButton_appIconImg" id="alloy_icon_app_8992_7_img"></div>
-          <div class="appButton_appName">
-            <div class="appButton_appName_inner" id="alloy_icon_app_8992_7_name">金山快盘</div>
-            <div class="appButton_appName_inner_right"></div>
-          </div>
-          <div title="卸载应用" id="alloy_icon_app_8992_7_delete" class="appButton_delete"></div>
-        </div>
-        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px;">
-          <div style="" id="alloy_icon_app_8992_7_icon_div" class="appButton_appIcon "><img alt="金山快盘" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" class="appButton_appIconImg" id="alloy_icon_app_8992_7_img"></div>
-          <div class="appButton_appName">
-            <div class="appButton_appName_inner" id="alloy_icon_app_8992_7_name">金山快盘</div>
-            <div class="appButton_appName_inner_right"></div>
-          </div>
-          <div title="卸载应用" id="alloy_icon_app_8992_7_delete" class="appButton_delete"></div>
-        </div>
-        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px;">
-          <div style="" id="alloy_icon_app_8992_7_icon_div" class="appButton_appIcon "><img alt="金山快盘" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" class="appButton_appIconImg" id="alloy_icon_app_8992_7_img"></div>
-          <div class="appButton_appName">
-            <div class="appButton_appName_inner" id="alloy_icon_app_8992_7_name">金山快盘</div>
-            <div class="appButton_appName_inner_right"></div>
-          </div>
-          <div title="卸载应用" id="alloy_icon_app_8992_7_delete" class="appButton_delete"></div>
-        </div>
-        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px;">
-          <div style="" id="alloy_icon_app_8992_7_icon_div" class="appButton_appIcon "><img alt="金山快盘" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" class="appButton_appIconImg" id="alloy_icon_app_8992_7_img"></div>
-          <div class="appButton_appName">
-            <div class="appButton_appName_inner" id="alloy_icon_app_8992_7_name">金山快盘</div>
-            <div class="appButton_appName_inner_right"></div>
-          </div>
-          <div title="卸载应用" id="alloy_icon_app_8992_7_delete" class="appButton_delete"></div>
-        </div>
-        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px;">
-          <div style="" id="alloy_icon_app_8992_7_icon_div" class="appButton_appIcon "><img alt="金山快盘" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" class="appButton_appIconImg" id="alloy_icon_app_8992_7_img"></div>
-          <div class="appButton_appName">
-            <div class="appButton_appName_inner" id="alloy_icon_app_8992_7_name">金山快盘</div>
-            <div class="appButton_appName_inner_right"></div>
-          </div>
-          <div title="卸载应用" id="alloy_icon_app_8992_7_delete" class="appButton_delete"></div>
-        </div>
-        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px;">
-          <div style="" id="alloy_icon_app_8992_7_icon_div" class="appButton_appIcon "><img alt="金山快盘" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" class="appButton_appIconImg" id="alloy_icon_app_8992_7_img"></div>
-          <div class="appButton_appName">
-            <div class="appButton_appName_inner" id="alloy_icon_app_8992_7_name">金山快盘</div>
-            <div class="appButton_appName_inner_right"></div>
-          </div>
-          <div title="卸载应用" id="alloy_icon_app_8992_7_delete" class="appButton_delete"></div>
-        </div>
-        <div class="appButton addQuickLinkButton" title="添加" screen="2">
+      <div class="appListContainer" customacceptdrop="1" index="2" style="overflow-y: hidden; display: block; opacity: 1; width: 1179px; margin-left: 28px; height: 213px; margin-top: 46px; " _olddisplay="">
+        <div class="appButton addQuickLinkButton" title="添加" screen="2" style="left: 169px; top: 124px; ">
           <div class="addQuickLinkButtonInner"></div>
           <div class="appButton_appName">
-            <div class="appButton_appName_inner">添加</div>
-            <div class="appButton_appName_inner_right"></div>
+            <div class="appButton_appName_inner">添加</div><div class="appButton_appName_inner_right"></div>
           </div>
         </div>
+        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px; ">
+          <div class="appButton_appIcon " id="alloy_icon_app_8992_7_icon_div" style=""><img id="alloy_icon_app_8992_7_img" class="appButton_appIconImg" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" alt="金山快盘"></div>
+          <div class="appButton_appName">
+            <div id="alloy_icon_app_8992_7_name" class="appButton_appName_inner">金山快盘</div><div class="appButton_appName_inner_right"></div>
+          </div>
+          <div class="appButton_delete" id="alloy_icon_app_8992_7_delete" title="卸载应用"></div>
+        </div>
+        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px; ">
+          <div class="appButton_appIcon " id="alloy_icon_app_8992_7_icon_div" style=""><img id="alloy_icon_app_8992_7_img" class="appButton_appIconImg" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" alt="金山快盘"></div>
+          <div class="appButton_appName">
+            <div id="alloy_icon_app_8992_7_name" class="appButton_appName_inner">21323</div><div class="appButton_appName_inner_right"></div>
+          </div>
+          <div class="appButton_delete" id="alloy_icon_app_8992_7_delete" title="卸载应用"></div>
+        </div>
+        <div appid="8992" fileid="8992" type="app" id="alloy_icon_app_8992_7" uid="app_8992" class="appButton " title="金山快盘" style="left: 27px; top: 12px; ">
+          <div class="appButton_appIcon " id="alloy_icon_app_8992_7_icon_div" style=""><img id="alloy_icon_app_8992_7_img" class="appButton_appIconImg" src="http://2.web.qstatic.com/webqqpic/pubapps/8/8992/images/big.png" alt="金山快盘"></div>
+          <div class="appButton_appName">
+            <div id="alloy_icon_app_8992_7_name" class="appButton_appName_inner">asd</div><div class="appButton_appName_inner_right"></div>
+          </div>
+          <div class="appButton_delete" id="alloy_icon_app_8992_7_delete" title="卸载应用"></div>
+        </div>
+        
       </div>
     </div>
   </div>
 </div>
 <div id="zoomWallpaperGrid" class="zoomWallpaperGrid" style="position: absolute; z-index: -10; left: 0px; top: 0px; overflow-x: hidden; overflow-y: hidden; height: 100%; width: 100%; "><img id="zoomWallpaper" class="zoomWallpaper" style="position: absolute; top: 0px; left: 0px;" src="module/admincp/css/skin/blue_glow.jpg"></div>
 <script type="text/javascript">
+var version = $.browser.version.replace('.','_'); 
+$('html').addClass(($.browser.msie?'ie ie':'webkit webkit')+version);
 var iDesk	= iDesk||{};
 (function(){
 	var a=iDesk;
@@ -215,19 +182,28 @@ var iDesk	= iDesk||{};
 			$(this).css({left:_left,top:_top});
 		}); 
 	}
+	
 })($)
 //var iDesk;
 $(function(){
 	iDesk.start();
-
-//    $('#demo13').click(function() { 
-//        $.blockUI({ 
-//            theme:     true, 
-//            title:    'This is your title', 
-//            message:  '<p>This is your message.</p>'
-//           // timeout:   2000 
-//        }); 
-//    });   
+	$( ".appListContainer" ).sortable({
+			items:".appButton",
+			opacity:0.5,
+			delay: 500,
+			start: function(event, ui) {
+				
+			}
+	});
+$( ".appListContainer" ).disableSelection();
+    $('.appButton').click(function() { 
+        $.blockUI({ 
+            theme:     true, 
+            title:    'This is your title', 
+            message:  '<p>This is your message.</p>'
+           // timeout:   2000 
+        }); 
+    });   
 })
 </script>
 </body>
