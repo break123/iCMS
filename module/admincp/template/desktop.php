@@ -5,10 +5,12 @@
 <title>iCMS后台管理</title>
 <link href="module/admincp/css/reset.css" rel="stylesheet" type="text/css" />
 <link href="module/admincp/css/desktop.css" rel="stylesheet" type="text/css" />
+<link href="module/admincp/css/fancybox/fancybox.css" rel="stylesheet" type="text/css"/>
 <link href="module/admincp/css/ui/theme.css" rel="stylesheet" type="text/css" id="skincss"/>
 <script type="text/javascript" src="module/admincp/js/jquery.js?1.6.2"></script>
 <script type="text/javascript" src="module/admincp/js/jquery.ui.js?1.8.17"></script>
 <script type="text/javascript" src="module/admincp/js/iCMS.ui.js?0.1.0"></script>
+<script type="text/javascript" src="module/admincp/js/fancybox.js?1.3.4"></script>
 </head>
 <body onselectstart="return false">
 <div class="hidden_div">
@@ -136,14 +138,21 @@ var version = $.browser.version.replace('.','_');
 $('html').addClass(($.browser.msie?'ie ie':'webkit webkit')+version);
 $(function(){
 	$.desktop.init();
+			$.fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
 	$('.appButton').click(function(){
 			var self = $(this);
-			$(this).iWindow({
+
+
+			self.iWindow({
 				width:960,
 				height:600,
 				appendTo:'.desktopContainer',
 				title:self.attr('title'),
-				autoOpen: false,
+				autoOpen: true,
 				appSrc:'http://v6.icms.com/editor.html'
 			});
 			//$(this).iWindow( "open" );

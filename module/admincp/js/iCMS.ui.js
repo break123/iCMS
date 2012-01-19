@@ -161,13 +161,20 @@
             
             self.uiButton_max.toggle(
             function() {
-                self.max(this);
+                self.max();
             }, function() {
-                self.restore(this);
+                self.restore();
             });
             
             self.uiButton_close.click(function() {
                 self.remove();
+            });
+            self.uiWindow_titleBar.dblclick(function() {
+            	if(self.element.data('max')){
+                	self.restore();
+            	}else{
+            		self.max();
+            	}
             });
             self.uiWindow_title.text(options.title).addClass('titleText');
             self._makeDraggable();
@@ -216,17 +223,19 @@
             this._isOpen = true;
             return self;
         },
-        max: function(obj) {
-            this.element.data('offset', this.uiWindow.offset());
+        max: function() {
+        	this.element.data('max', true);
+        	this.element.data('offset', this.uiWindow.offset());
             this.uiWindow.css({width: this._width(),height: this._height(),left: "-73px",top:0});
             this.uiFrame.css({width:"100%",height:"100%"});
-            $(obj).addClass("window_restore").removeClass("window_max");
+            this.uiButton_max.addClass("window_restore").removeClass("window_max");
         },
-        restore: function(obj) {
+        restore: function() {
+        	this.element.data('max', false);
             var offset = this.element.data('offset');
             this.uiWindow.css({width: this.options.width,height: this.options.height}).css(offset);
             this.uiFrame.css({width:"99%",height:"100%"});
-            $(obj).addClass("window_max").removeClass("window_restore");
+            this.uiButton_max.addClass("window_max").removeClass("window_restore");
         },
         
         remove: function() {
@@ -258,14 +267,15 @@
             self.uiWindow.resizable({
                 //cancel: '.ui-dialog-content',
                 containment: 'document',
-                //iframeFix: true,
+                iframeFix: true,
                 alsoResize: self.uiFrame,
                 maxWidth: options.maxWidth,
                 maxHeight: options.maxHeight,
                 minWidth: options.minWidth,
                 minHeight: self._minHeight(),
                 start: function(event, ui) {
-                	self.uiFrame.hide();
+                	//$("body").find("iframe").hide();
+                	//self.uiFrame.hide();
                     $(this).addClass("ui-dialog-resizing");
                     self._trigger('resizeStart', event, filteredUi(ui));
                 },
@@ -273,7 +283,8 @@
                     self._trigger('resize', event, filteredUi(ui));
                 },
                 stop: function(event, ui) {
-                	self.uiFrame.show();
+                	//$("body").find("iframe").show();
+                	//self.uiFrame.show();
                     $(this).removeClass("ui-dialog-resizing");
                     options.height = $(this).height();
                     options.width = $(this).width();
