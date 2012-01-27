@@ -115,21 +115,22 @@
             .mousedown(function() {
                 self.open();
             });
-            
-            uiDivs = {
+            var uiDivs = {
                 'titleBar': null,
                 'titleButtonBar': 'titleBar',
                 'title': 'titleBar',
-                'body': null,
+                'body': null
             };
             
             $.each(uiDivs, function(i, e) {
                 var pobj = eval("self.uiWindow" + (e == null ? '' : ('_' + e)));
                 self.createEel(i, "uiWindow", "div", "window", "window", pobj);
             });
-            var appSrc = self.element.attr("href") || options.appSrc, 
-            uiFrame = (self.uiFrame = $('<iframe id="iframeApp_' + self.appID + '" name="iframeApp_' + self.appID + '" class="iframeApp" frameborder="no" allowtransparency="true" scrolling="auto" hidefocus="" src="' + appSrc + '" style="left: 0px;width:99%;height:100%;"></iframe>'))
-            .appendTo(self.uiWindow_body);
+            var appSrc = self.element.attr("href") || options.appSrc;
+            var uiFrame = (self.uiFrame = $('<iframe id="iframeApp_' + self.appID + '" name="iframeApp_' + self.appID + '" class="iframeApp" frameborder="no" allowtransparency="true" scrolling="auto" hidefocus="" src="' + appSrc + '"></iframe>'))
+            	.appendTo(self.uiWindow_body);
+            var uiFrameFix = (self.uiFrameFix =$('<div id="window-iframeFix_' + self.appID + '" class="window-iframeFix"></div>'))
+            	.appendTo(self.uiWindow_body);
 
 
             //'close','max','restore','min','fullscreen','restore_full'
@@ -140,7 +141,7 @@
             $("#taskContainer,#taskContainerInner").width(114*self.appID);
             $(".taskGroup").removeClass('taskCurrent');
             
-            self.taskGroup=$('<div class="taskGroup taskGroupAnaWidth"><div class="taskItemBox" style="display: block;"><a class="taskItem fistTaskItem" href="#" onselectstart="return false"><div class="taskItemIcon"><img src=""><div class="taskItemIconState"></div></div><div class="taskItemTxt"></div></a></div></div>');
+            self.taskGroup=$('<div class="taskGroup taskGroupAnaWidth"><div class="taskItemBox"><a class="taskItem fistTaskItem" href="#" onselectstart="return false"><div class="taskItemIcon"><img src=""><div class="taskItemIconState"></div></div><div class="taskItemTxt"></div></a></div></div>');
             var taskGroupImg= self.taskGroup.find("img"),
 				taskItemTxt	= self.taskGroup.find(".taskItemTxt");
 
@@ -209,6 +210,9 @@
             var self = this, 
             options = self.options, 
             uiWindow = self.uiWindow;
+            
+            $("body").find(".window-iframeFix").show();
+            this.uiFrameFix.hide();
             
             var zIndex = parseInt($('.window_current').css("z-index")) || this.options.zIndex;
             $('.window').removeClass('window_current');
@@ -308,7 +312,7 @@
             }
             
             self.uiWindow.draggable({
-                cancel: '.window_titleButtonBar,.window_toolButtonBar',
+                cancel: '.window_titleButtonBar',
                 handle: '.window_titleBar',
                 iframeFix: true,
                 start: function(event, ui) {
@@ -414,7 +418,7 @@
             } else {
                 return $(document).width();
             }
-        },
+        }
     });
     $.extend($.ui.iWindow, {
         version: "0.1.0"
